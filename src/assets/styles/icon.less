@@ -1,0 +1,36 @@
+// 因目前没有iconfont，整站所有小图标图片都需要抽离至此处统一管理，统一以 icon-XXX 进行命名
+
+.tab-base(@w,@h){
+  display: inline-block;
+  width: @w;
+  height: @h;
+  background-size: @w @h;
+  background-repeat: no-repeat;
+}
+.icon-home,.icon-home-active,.icon-search,.icon-search-active,.icon-find,.icon-find-active,.icon-mine,.icon-mine-active{
+  .tab-base(45px, 44px);
+}
+.icon-home{
+  background-image: url("../images/icon/tab_home.png");
+}
+.icon-home-active{
+  background-image: url("../images/icon/tab_home_active.png");
+}
+.icon-search{
+  background-image: url("../images/icon/tab_search.png");
+}
+.icon-search-active{
+  background-image: url("../images/icon/tab_search_active.png");
+}
+.icon-find{
+  background-image: url("../images/icon/tab_find.png");
+}
+.icon-find-active{
+  background-image: url("../images/icon/tab_find_active.png");
+}
+.icon-mine{
+  background-image: url("../images/icon/tab_mine.png");
+}
+.icon-mine-active{
+  background-image: url("../images/icon/tab_mine_active.png");
+}
