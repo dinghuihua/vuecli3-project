@@ -14,5 +14,13 @@ module.exports = {
       .set('assets', resolve('src/assets'))
       .set('components', resolve('src/components'))
       .set('views', resolve('src/views'))
+  },
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'less',
+      patterns: [
+        path.resolve(__dirname, 'src/assets/styles/global.less')
+      ]
+    }
   }
 }
