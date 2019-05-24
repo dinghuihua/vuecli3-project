@@ -7,17 +7,17 @@ export default [
   {
     path: '/searchInsurance',
     name: 'SearchInsurance',
-    component: () => import(/* webpackChunkName: "Login" */ 'views/search/SearchInsurance.vue')
+    component: () => import(/* webpackChunkName: "SearchInsurance" */ 'views/search/SearchInsurance.vue')
   },
   {
     path: '/find',
     name: 'Find',
-    component: () => import(/* webpackChunkName: "Login" */ 'views/find/Find.vue')
+    component: () => import(/* webpackChunkName: "Find" */ 'views/find/Find.vue')
   },
   {
     path: '/mine',
     name: 'Mine',
-    component: () => import(/* webpackChunkName: "Login" */ 'views/mine/Mine.vue')
+    component: () => import(/* webpackChunkName: "Mine" */ 'views/mine/Mine.vue')
   }
   // {
   //   path: '/register',

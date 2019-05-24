@@ -41,7 +41,7 @@ export default {
     width: 100%;
     height: 104px;
     padding: 12px 0;
-    background-color: #fff;
+    background-color: @white;
     box-shadow: 0 -1px 6px #f6f6f6;
     .foot-guide{
       display: flex;
@@ -56,7 +56,7 @@ export default {
           font-size: 22px;
         }
         &.active{
-          color: red;
+          color: @primary-color;
         }
       }
     }
