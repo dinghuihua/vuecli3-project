@@ -1,6 +1,5 @@
 export default {
-  // 得到是否正在加载中
-  getLoading: (state) => state.isLoading,
-  // 得到商家详细数据
-  getShopInfo: (state) => state.shopInfo
+  showFooter: (state) => state.showFooter,
+  loginStatus: (state) => state.loginStatus,
+  getLoading: (state) => state.isLoading
 }

@@ -3,11 +3,10 @@
     <keep-alive>
       <router-view v-if="$route.meta.keepAlive"/>
     </keep-alive>
-    <!--</transition>-->
 
-    <transition name="router-fade" mode="out-in">
+    <!--<transition name="router-fade" mode="out-in">-->
       <router-view v-if="!$route.meta.keepAlive"/>
-    </transition>
+    <!--</transition>-->
     <foot-tab/>
   </div>
 </template>

@@ -1,10 +1,14 @@
-import {
-  SET_LOADING
-} from './mutation_types.js'
+import * as type from './mutation_types.js'
 
 export default {
+  [type.SHOW_FOOTER] (state, flag) {
+    state.showFooter = flag
+  },
+  [type.SET_LOGIN_STATUS] (state, flag) {
+    state.loginStatus = flag
+  },
   // 设置是否正在加载
-  [SET_LOADING] (state, loadstate) {
+  [type.SET_LOADING] (state, loadstate) {
     state.isLoading = loadstate
   }
 }

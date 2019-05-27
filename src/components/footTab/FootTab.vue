@@ -4,17 +4,18 @@
       <router-link :to="{name: item.routeName}" class="nav-item" :class="{'active': currentRoute === item.routeName}" v-for="(item,index) in tabArr" :key="index">
         <i v-if="currentRoute === item.routeName" :class="item.iconActive"></i>
         <i v-else :class="item.icon"></i>
-        <p class="text">{{item.title}}</p>
+        <span class="text">{{item.title}}</span>
       </router-link>
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   data () {
     return {
-      showFooter: true,
       currentRoute: this.$route.name,
       tabArr: [
         { title: '首页', routeName: 'Index', icon: 'icon-home', iconActive: 'icon-home-active' },
@@ -23,6 +24,14 @@ export default {
         { title: '我的', routeName: 'Mine', icon: 'icon-mine', iconActive: 'icon-mine-active' }
       ]
     }
+  },
+  computed: {
+    ...mapGetters([
+      'showFooter'
+    ])
+  },
+  mounted () {
+    console.log(this.$store.state)
   },
   watch: {
     '$route' (to, from) {

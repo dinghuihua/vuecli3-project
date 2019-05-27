@@ -1,7 +1,7 @@
-import { shopInfo } from '../../server/sellers.js'
 
 export default {
+  showFooter: false,
+  loginStatus: false,
   // 是否在加载中
-  isLoading: false,
-  shopInfo
+  isLoading: false
 }

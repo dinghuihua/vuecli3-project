@@ -6,7 +6,7 @@
 
 > 开发环境 macOS 10.13.2 ,nodejs v10.15.3 , npm 6.9.0
 
-> 技术栈：vue2 + vuex2 + vue-router2 + axios + Vant + webpack + ES6 + less + eslint
+> 技术栈：vue2 + vuex3 + vue-router3 + axios + Vant + webpack + ES6 + less + eslint
 
 ```
 # 项目拉取
@@ -84,7 +84,7 @@ src
 
 2. 引入全局的less的mixin(使用全局less变量)，请在`global.less`中编写
 
-3. 已配置assets、components、views目录的路径别名，可直接使用
+3. 已配置assets、components、views目录的路径别名，可直接使用。
 
    禁止使用 `../../xxx`这种路径引入文件
 
@@ -93,11 +93,15 @@ src
 
 5. 引入vuex状态管理
 
+`import { mapState, mapGetters,mapActions,mapMutations } from 'vuex'`     
+
 6. 生产环境自动删除`console`相关代码
 
+7. 登录拦截
+   *  页面及路由拦截：将需要强登录才可进入的页面路由中加上xx属性
+   *  事件级登录判断：请使用全局isLogin函数
 
---
--- 解决移动端300ms点击延迟
+
 
 
 ## 四、开发编码相关约定
@@ -106,7 +110,7 @@ src
     * router可按业务进行模块划分为独立文件，再导入index使用
     * `<img>`的src路径、背景图url请使用`~`相对于assets目录引入。禁止使用 `../../xxx`这种方式
     * 导入组件的路径请使用别名components导入，配置见`vue.config.js`
-    * 如果使用cdn，请建立与assets对应的目录名及文件名，设置一个全局cdn前缀变量，统一管理使用
+    * ⚠️️如果使用cdn，请建立与assets对应的目录名及文件名，设置一个全局cdn前缀变量（less和vue），统一管理使用
     
     
 2. 关于命名
@@ -118,9 +122,9 @@ src
     * 统一使用less编写样式
     * 使用px为单位即可
     * 使用minxin抽取公共样式
-    * 抽取公共颜色变量
+    * 抽取公共颜色变量、重复的代码块
 
-
+4. 编码风格
 ```
 <template>
   <div class="home">
