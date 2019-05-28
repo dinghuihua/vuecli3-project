@@ -132,7 +132,8 @@ export default {
 7. axios封装
     * http.js 公共参数配置 、接口报错统一处理
     * api.js  整站api
-    * 使用方式：按需导入 如 ``import { 接口函数名 } from 'axios/api'``
+    * 已挂载到全局，使用方式：this.API.XXX()
+    
 
 8. 路由设计、登录拦截
   
