@@ -56,9 +56,7 @@ export default {
       display: flex;
       .nav-item{
         flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        .vertical-center();
         color: @base-color;
         .text{
           margin-top: 8px;
