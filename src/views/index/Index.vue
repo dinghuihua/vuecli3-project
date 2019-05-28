@@ -1,8 +1,9 @@
 <template>
   <div class="index-wrapper">
     <h1 class="title">我是首页{{msg}}</h1>
+    <p>{{1555851774 | formatTimer()}}</p>
     <img class="logo" src="~assets/images/base/logo-big.png">
-    <router-link to="/test/path">点我进入demo</router-link>
+    <router-link to="/test/path">【点我进入demo】</router-link>
   </div>
 </template>
 

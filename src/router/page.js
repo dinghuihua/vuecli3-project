@@ -1,9 +1,20 @@
 export default [
+  /**
+   *About 用户
+   */
   {
     path: '/login',
     name: 'Login',
     component: () => import(/* webpackChunkName: "Login" */ 'views/sign/Login.vue')
   },
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import(/* webpackChunkName: "Register" */ 'views/sign/Register.vue')
+  },
+  /**
+   *About 险种
+   */
   {
     path: '/searchInsurance',
     name: 'SearchInsurance',
@@ -19,16 +30,4 @@ export default [
     name: 'Mine',
     component: () => import(/* webpackChunkName: "Mine" */ 'views/mine/Mine.vue')
   }
-  // {
-  //   path: '/register',
-  //   name: 'Register',
-  //   component: (resolve) => void(require(['page/sign/register.vue'], resolve))
-  // },
-  // {
-  //   path: '/settings',
-  //   component: (resolve) => void(require(['page/user/setting.vue'], resolve)),
-  //   meta: {
-  //     requireAuth: true
-  //   }
-  // }
 ]

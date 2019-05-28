@@ -42,7 +42,7 @@ const router = new Router({
 
 router.beforeEach((to, from, next) => {
   const token = localStorage.getItem('token')
-  if (to.meta.requireAuth) { // 判断该路由是否需要登录权限
+  if (to.meta.auth) { // 判断该路由是否需要登录权限
     if (store.getters.loginStatus || token) {
       next()
     } else {
