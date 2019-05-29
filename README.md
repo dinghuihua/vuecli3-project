@@ -97,7 +97,7 @@ src
 
 2. 引入全局的less的mixin(使用全局less变量)，请在`global.less`中编写
 
-3. 已配置axios、assets、components、views目录的路径别名，可直接使用,更加方便的引入了
+3. 已配置assets、components、views目录的路径别名，可直接使用，方便引入
 
 4. 已引入Vant（移动端的vue组件库），直接 `import { XXX } from 'vant'` 导入组件，完成按需加载
 [戳此进官网](https://youzan.github.io/vant/#/zh-CN/intro)
@@ -106,7 +106,7 @@ src
 
 组件中使用示例：
 
-`import { mapState, mapGetters,mapActions,mapMutations } from 'vuex'`     
+`import { mapState, mapGetters, mapActions, mapMutations } from 'vuex'`     
 
 ```js
 export default {
@@ -130,8 +130,8 @@ export default {
 6. 生产环境（上线后）自动清除所有`console`打印的代码【待测试】
 
 7. axios封装
-    * http.js 公共参数配置 、接口报错统一处理
-    * api.js  整站api
+    * http.js：公共参数配置 、接口报错统一处理
+    * api.js：整站api函数抽离至此
     * 已挂载到全局，使用方式：this.API.XXX()
     
 
@@ -139,23 +139,26 @@ export default {
   
    *  页面级别的路由拦截：
         
-        将需要强登录才可进入的页面路由中 meta 加上 属性auth: true
+        将需要强登录才可进入的页面路由中 meta 加上 属性auth: true即可
    
    *  事件级登录判断：请使用vuex getter的loginStatus进行判断【true/false】
    
-   *  如需缓存当前组件，可在meta中设置keepAlive: true
+   *  如需缓存当前组件，可在meta中设置keepAlive: true即可
     
-    (即：浏览器回退时，不刷新不重新加载，能回到上个页面上次滚动到的位置)
+         (即：浏览器回退时，不刷新、不重新加载，能回到上个页面上次滚动到的位置，多应用于列表页进详情后再回退)
 
 9. 其他
-    * 注入全局过滤器
+    * 注入全局过滤器`filters.js`
     
         使用示例：`{{1555851774 | formatTimer()}}`
         
-    * minxin：组件间的公共代码快/方法的抽取，按需import 
+    * minxin：组件间的公共代码快/方法的抽取，写在`mixin.js`中，按需import
     
-    * 全局Toast提示，使用：
-    ```
+    * 全局Toast提示，使用示例：
+    ```js
+        this.$toast('网络请求不存在')
+        
+        //含有不可点击的蒙层
         this.$toast({
           mask: true,
           message: '网络请求不存在'
@@ -182,11 +185,11 @@ export default {
 3. 关于样式
     * 统一使用less编写样式
     * 使用px为单位即可
-    * 使用minxin抽取公共颜色变量、重复的代码块，写在global.less中
+    * 使用mixin抽取公共颜色变量、重复的代码块，写在`global.less`中
     
 4. 提交代码前 必须先解决eslint的警告和报错
 
-5. 两个及以上的页面用到相同的组件或功能，应考虑是否封装，是否使用mixin，避免代码重复copy
+5. 两个及以上的页面用到相同的组件或功能，应考虑是否封装，是否使用vue的mixin，避免代码重复copy
 
 6. 编码风格 - 推荐的书写顺序
 ```
@@ -238,7 +241,7 @@ export default {
 ```
 
 # 更多编码规范
-See [Vue官方风格指南](https://cn.vuejs.org/v2/style-guide/)
+[Vue官方风格指南](https://cn.vuejs.org/v2/style-guide/)
 
-See [Vue.js 组件编码规范](https://github.com/pablohpsilva/vuejs-component-style-guide/blob/master/README-CN.md)
+[Vue.js 组件编码规范](https://github.com/pablohpsilva/vuejs-component-style-guide/blob/master/README-CN.md)
 
