@@ -48,10 +48,10 @@ export default {
     bottom: 0;
     z-index: 100;
     width: 100%;
-    height: 104px;
-    padding: 12px 0;
+    height: 50px;
+    padding: 6px 0;
     background-color: @white;
-    box-shadow: 0 -1px 6px #f6f6f6;
+    box-shadow: 0px 0px 20px 0px rgba(236,236,236,1);
     .foot-guide{
       display: flex;
       .nav-item{
@@ -59,8 +59,7 @@ export default {
         .vertical-center();
         color: @base-color;
         .text{
-          margin-top: 8px;
-          font-size: 22px;
+          font-size: 10px;
         }
         &.active{
           color: @primary-color;
